@@ -9,7 +9,7 @@ class PostCubit extends Cubit<PostState> {
   Future<void> upLoadPost() async {
     try {
       final response = await get(
-        Uri.parse("https://jsonplaceholder.typicode.com/photos"),
+        Uri.parse("https://dummyjson.com/products"),
         headers: {"Accept": "application/json"},
       );
       final responseBody = jsonDecode(response.body);
